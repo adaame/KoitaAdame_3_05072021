@@ -26,11 +26,14 @@ body a {
   font-family: "Roboto";
 }
 
-h1,
-h2,
+
 h3 {
   font-family: "shrikhand", sans-serif;
-  font-size: 1.6em;
+  font-size: 1.5rem;
+}
+h2{
+    font-family: "shrikhand", sans-serif;
+    font-size: 1.6em;
 }
 .grid_logo a{
     font-family: "shrikhand", sans-serif;
@@ -79,7 +82,8 @@ main{
     height: 40vh;
 }
 .presentation_title{
-    width: 80%;
+    width: 79%;
+    font-size: 2.3rem;
 }
 .presentation_describe{
     color: gray;
@@ -133,19 +137,18 @@ main{
 }
   
 #fonctionnement ol li {
-    margin: 1rem 0;
+    margin: 1rem auto;
     display: flex;
-    flex-grow: 1;
-    box-shadow:.25rem .25rem .5rem rgba(0,0,0,.125);
+    flex-grow: 0.5;
+    box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
     border-radius: 20px;
-
 }
 #fonctionnement ol li a{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 30rem;
-    padding: 20px;
+    padding: 20px 45px;
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
@@ -167,11 +170,10 @@ main{
 }
 /******************RESTAURANT******************/
 #resto_grid{
-    width: 100%;
-    background-color: #f6f6f6;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    background-color: #f6f6f6;
 }
 a.resto_card{
     display: flex;
@@ -196,8 +198,10 @@ a.resto_card{
     top: 1rem;
     background: #99e2d0;
     border-radius: 2px;
-    padding: 0.5em;
-    font-size: smaller;
+    padding: 0.35em;
+    font-size: 1.6rem;
+    font-family: "shrikhand", sans-serif;
+    font-weight: normal;
 }
 .resto_name{
     background: white;
@@ -237,7 +241,7 @@ padding: 2px 6px;
 height: 40%;
 }
 .resto_subtitle{
-    font-size: 1.8rem;
+    font-weight: lighter;
 }
 /**************Footer*******************/
 .footer div {
