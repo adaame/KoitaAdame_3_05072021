@@ -307,6 +307,10 @@ a.resto_card {
 .heart :first-child {
   font-size: 2rem;
 }
+.description{
+  display: flex;
+  justify-content: space-between;
+}
 /* 
 .heart::after{
     content: '';
@@ -382,17 +386,17 @@ footer .fas {
 }
 /*---------------------
 ----------------------MAIN-----------------*/
-
 .menu_main{
     display: flex;
     flex-wrap: wrap;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    position: fixed;
+    position: absolute;
     top: 26rem;
-    background: white;
+    background-color:#f6f6f6;
     width: 100%;
     flex-direction: column;
+    /*permet de remonter la partie titre sur la photo sans tout bloquée */
 }
 .menu_title_resto{
     display: flex;
@@ -400,6 +404,10 @@ footer .fas {
     width: 100%;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    height: 7.5rem;
+    background: #f6f6f6;
+    justify-content: space-between;
+
 }
 .menu_title_resto:first-child {
     font-size: 2.5rem;
@@ -413,20 +421,54 @@ button{
     width: 100%;
 }
 button a {
-    display: flex;
-    justify-content: center;
-    width: 65%;
-    border: 2px solid #f2f2f2;
-    border-radius: 24px;
-    font-weight: lighter;
-    padding: 15px;
-    margin-top: 1.5rem;
-    font-size: medium;
-    background: linear-gradient(#ff79da, #9356dc);
-    color: white;
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  border: 2px solid #f2f2f2;
+  border-radius: 24px;
+  font-weight: lighter;
+  padding: 15px;
+  margin-top: 1.5rem;
+  font-size: medium;
+  background: linear-gradient(#ff79da, #9356dc);
+   color: white;
 }
 .menu_main h2 {
   font-weight: lighter;
   font-size: 1.8em;
  }
- 
+ .menu_span{
+  border: 0.15em solid #99E2D0;
+  width: 3.4rem;
+  display: block;
+  margin-top: 5px;
+ }
+ .menus_parts{
+  display: flex;
+  flex-wrap: wrap;
+ }
+ .menus_parts article{
+  height: 5.5rem;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+ .descriptions{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   flex-grow: 1;
+ }
+ .menu_name{
+  margin-bottom: 0.5em;
+ }
+ .price{
+  padding: 20px;
+ }
+ .menu_component{
+   margin-bottom: 1.2rem;
+ }
