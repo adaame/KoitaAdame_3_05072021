@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 *,
 ::before,
 ::after {
@@ -30,16 +31,11 @@ background-color:#f6f6f6;
 }
 
 h3 {
-  font-family: "shrikhand", sans-serif;
   font-size: 1.5rem;
   font-weight: lighter;
 }
 h2{
-    font-family: "shrikhand", sans-serif;
     font-size: 1.6em;
-}
-.grid_logo a{
-    font-family: "shrikhand", sans-serif;
 }
 .grand_title{
     font-size: 2em;
@@ -168,6 +164,8 @@ main{
     flex-wrap: wrap;
     flex-direction: column;
     background-color: white;
+    height: 35rem;
+    justify-content: end;
 }
 #fonctionnement ol{
     display: flex;
@@ -262,7 +260,6 @@ a.resto_card{
     border-radius: 2px;
     padding: 0.35em;
     font-size: 1.6rem;
-    font-family: "shrikhand", sans-serif;
     font-weight: normal;
 }
 .resto_name{
@@ -325,12 +322,14 @@ a.resto_card{
  
 } */
 /**************Footer*******************/
-.footer div {
+.footer {
     height: 18rem;
     background: #353535;
     margin-top: 6rem;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 2rem;
 
 }
 .footer ul{
@@ -345,32 +344,25 @@ a.resto_card{
     width: 100%;
 }
 .footer ul li a{
-
-    color: white;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-        flex-shrink: 1;
+    color: #fff;
+    margin-left: 10px;
+    font-weight: bolder;
 }
-
-
-
-
-/* .grid_container{
-    display: grid;
-    grid-template-columns: repeat(2, 185px);
-    grid-template-rows: repeat(12, 60px);
+.footer_logo{
+    color: #fff;
+    font-family: "Shrikhand","cursive";
+    font-size: 2rem;
+    margin: 0.7em 0;
 }
-main{
-    display: grid;
-    grid-area: 2/3;
-    grid-template-columns: repeat(2, 185px);
-    grid-template-rows: repeat(6, 30px);
+footer .fas {
+    color: #fff;
+    font-size: 1.4rem;
+    height: 1.4rem;
+    width: 1.4rem;
+    line-height: 1rem;
+   }
 
-}
-.grid_logo{
-    display: grid;
-    grid-column:1 / -1 ;
-    background: red;
-    justify-content: center;
-} */
+/*--------------------------------------------------------------
+----------------------------FIN PAGE ACCUEIL----------------
+----------------------------------------------------------*/
+
