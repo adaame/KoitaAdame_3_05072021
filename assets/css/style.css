@@ -301,7 +301,6 @@ a.resto_card {
 
 .heart {
   display: flex;
-  margin: 0 auto;
   flex-basis: 15%;
 }
 .heart :first-child {
