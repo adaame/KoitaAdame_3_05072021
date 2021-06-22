@@ -368,9 +368,9 @@ footer .fas {
 
 /*---------------------
 ----------------------header-----------------*/
-.menus_container{
+/* .menus_container{
   position: relative;
-}
+} */
 .header_menu {
   display: flex;
   box-shadow: none;
@@ -386,6 +386,7 @@ footer .fas {
   width: 100%;
   height: 15rem;
   height: 24rem;
+  object-fit: cover;
 }
 /*---------------------
 ----------------------MAIN-----------------*/
@@ -397,8 +398,9 @@ footer .fas {
     position: absolute;
     top: 26rem;
     background-color:#f6f6f6;
-    width: 100%;
     flex-direction: column;
+    height: 200vh;
+    width: 100%;
     /*permet de remonter la partie titre sur la photo sans tout bloquée */
 }
 .menu_title_resto{
@@ -418,21 +420,6 @@ footer .fas {
 }
 .menu_title_resto .heart{
     flex-basis: 10%;
-}
-.btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 7rem;
-}
-.menu_btn{
-  border: 2px solid #f2f2f2;
-border-radius: 24px;
-font-weight: lighter;
-padding: 15px 40px;
-font-size: medium;
-background: linear-gradient(#ff79da, #9356dc);
-color: white;
 }
 .menu_main h2 {
   font-weight: lighter;
@@ -482,6 +469,63 @@ color: white;
  .menu_component{
    margin-bottom: 1.2rem;
  }
- .menus_container footer{
-   height: 18rem;
+ .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+}
+.menu_btn{
+  border: 2px solid #f2f2f2;
+border-radius: 24px;
+font-weight: lighter;
+padding: 15px 40px;
+font-size: medium;
+background: linear-gradient(#ff79da, #9356dc);
+color: white;
+}
+.menu_btn:hover{
+  opacity :0.7;
+}
+.menu_footer {
+  height: 18rem;
+  background: #353535;
+  margin-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 2rem;
+}
+.menu_footer {
+  position: absolute;
+  top: 130rem;
  }
+ .menu_footer ul {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: 77%;
+}
+.menu_footer li {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.menu_footer ul li a {
+  color: #fff;
+  margin-left: 10px;
+  font-weight: bolder;
+}
+.menu_footer .footer_logo {
+  color: #fff;
+  font-family: "Shrikhand", "cursive";
+  font-size: 2rem;
+  margin: 0.7em 0;
+}
+.menu_footer .fas {
+  color: #fff;
+  font-size: 1.4rem;
+  height: 1.4rem;
+  width: 1.4rem;
+  line-height: 1rem;
+}
