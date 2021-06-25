@@ -302,25 +302,31 @@ a.resto_card {
 .heart {
   display: flex;
   flex-basis: 15%;
+  position: relative; 
+  font-size: 3rem;
 }
-.heart :first-child {
-  font-size: 2rem;
+.heart_1{ 
+  position: absolute; 
 }
-.description {
-  display: flex;
-  justify-content: space-between;
+.heart_2 {
+  color:transparent;
 }
-/* 
-.heart::after{
-    content: '';
-    background: linear-gradient( #FF79DA, #9356DC );
-    height: 25px;
-    width: 25px;
-    display: block;
-    position: absolute;
-  
- 
-} */
+.heart:hover .heart_2{
+  color:  rgba(147,86,220,1);
+  transition: 0.4s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation: heartColored  1s ;
+  -webkit-animation: heartColored  1s ;
+}
+@keyframes heartColored {
+  0% {color: #451a78;}
+  100% {color: #9356dc;}
+}
+.heart:hover .heart_1{
+  display: none;
+}
+
 /**************Footer*******************/
 .footer {
   height: 18rem;
@@ -413,6 +419,7 @@ footer .fas {
   height: 7.5rem;
   background: #f6f6f6;
   justify-content: space-between;
+  position: relative;
 }
 .menu_title_resto:first-child {
   font-size: 2.5rem;
@@ -544,32 +551,31 @@ footer .fas {
   background-color: #99e2d0;
   border-top-right-radius: 9px;
   border-bottom-right-radius: 9px;
-  right: -7rem;
+  /* right: 7rem; */
   cursor: pointer;
   position: absolute;
 }
-.menu_validation:hover {
+.menus_parts article:hover .menu_validation {
   cursor: pointer;
-  transform: slide 3s forwards;
-  left: 8rem;
+  animation: slide 3s forwards;
+  left:40rem;
 }
 .price:after{
   transform: translate3D(-100%,100%,0);
 }
 
-.price:hover:after{
+.price:hover::before{
   transform: translate3D(0,0,0);
   transition: all .5s;
 }
-/* @keyframes slide {
+@keyframes slide {
   0% {
     transform: translateX(0);
 }
   100% {
-    transform: translateX(-450px);
-    
-  }
-} */
+    transform: translateX(-50px);
+}
+}
 
 .price :hover {
   left: 200px;
