@@ -37,6 +37,10 @@ h3 {
 h2 {
   font-size: 1.6em;
 }
+.descriptions h2, h3{
+  text-overflow: clip ellipsis;
+  overflow: hidden;
+}
 .grand_title {
   font-size: 2em;
 }
@@ -158,6 +162,9 @@ main {
   font-size: medium;
   background: linear-gradient(#ff79da, #9356dc);
   color: white;
+}
+#presentation .btn:hover{
+  opacity: 0.7;
 }
 #fonctionnement {
   display: flex;
@@ -319,6 +326,10 @@ a.resto_card {
   transform: scale(0.1);
   -webkit-transform: scale(0.1);
   -moz-transform: scale(0.1);
+  background: linear-gradient(#ff79da, #9356dc );
+background-clip: border-box;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 .heart:hover .heart_2{
   color:  rgba(147,86,220,1);
@@ -425,7 +436,7 @@ footer .fas {
   height: 200vh;
   width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis; */
   /*permet de remonter la partie titre sur la photo sans tout bloquée */
 }
 .menu_title_resto {
@@ -497,6 +508,9 @@ footer .fas {
 }
 .menu_component {
   margin-bottom: 1.2rem;
+}
+.menu_component article{
+  overflow: hidden;
 }
 .btn {
   display: flex;
@@ -574,33 +588,26 @@ footer .fas {
   background-color: #99e2d0;
   border-top-right-radius: 9px;
   border-bottom-right-radius: 9px;
-  right: -5rem;
+  right: -7rem;
   cursor: pointer;
   position: absolute;  
 }
-.price:hover.menu_validation{
-  /* right:-150px; */
-  transform: translate(-150px,0);
-  animation: slide 3s forwards;
-  -webkit-animation: slide 3s forwards;
-  -webkit-transform: translate(-150px,0);
-  -moz-transform: translate(-150px,0);
-  -ms-transform: translate(-150px,0);
+article:hover .price{
+  right:0rem;
+  transform: translate(-25px,0);
+  animation: slide 0.2s forwards;
+  -webkit-animation: slide 0.2s forwards;
+  -webkit-transform: translate(-25px,0);
+  -moz-transform: translate(-25px,0);
+
 }
-/* .menus_parts article:hover .menu_validation {
-  cursor: pointer;
-  animation: slide 3s forwards;
-  right:40rem;
-} */
- /* .price::after{
-  transform: translateX(-100%,100%);
-
+ article:hover .menu_validation{
+  right:0rem;
+  transition: right 0.2s;
+  -webkit-transition: right 0.2s;
+  -moz-transition: right 0.2s;
+  /*apparition du check au passage de la souris */
 } 
-
-.price:hover::before{
-  transform: translateX(0,0);
-  transition: all .5s;
-} */
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -611,15 +618,14 @@ footer .fas {
   }
 }
 
-.price:hover{
+/* .price:hover{
  cursor: pointer;
- /*animation: slide 3s forwards;
- */transform: translate(10%,0);
+ transform: translate(10%,0);
  -webkit-transform: translate(10%,0);
  -moz-transform: translate(10%,0);
  -ms-transform: translate(10%,0);
  -o-transform: translate(10%,0);
-}
+} */
 .menu_validation :first-child {
   color: #99e2d0;
   background: white;
@@ -660,7 +666,7 @@ to{
   -moz-transform: translateY(0px);
 }
 }
-.loader{
+/* .loader{
   width: 100%;
   height: 100vh;
   background: rgba(255, 255, 255, 0.5);
@@ -672,6 +678,7 @@ to{
   z-index: 1000;
   top: 0;
   position: fixed;
+
 }
 .loader::after{
   animation-fill-mode: both;
@@ -684,7 +691,7 @@ to{
   background: linear-gradient(#ff79da, #9356dc);
   animation: loaderflip 1.2s infinite ease-in-out ;
   -webkit-animation: loaderflip 1.1s infinite ease-in-out ;
-}
+} */
 @keyframes loaderflip {
   0%{
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
@@ -701,6 +708,4 @@ to{
     -webkit-transform: perspective(120px)rotateX(-180deg) rotateY(-180deg);
     -moz-transform: perspective(120px)rotateX(-180deg) rotateY(-180deg);
 }
-
-  
 }
