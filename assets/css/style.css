@@ -178,6 +178,7 @@ main {
   display: flex;
   justify-content: center;
   width: 65%;
+  height: auto;
   border: 2px solid #f2f2f2;
   border-radius: 24px;
   font-weight: lighter;
@@ -200,7 +201,7 @@ main {
   flex-direction: column;
   background-color: white;
   height: 35rem;
-  justify-content: end;
+  justify-content: space-evenly;
 }
 
 #fonctionnement ol {
@@ -255,6 +256,9 @@ main {
   border-radius: 20px;
   width: 100%;
 }
+#fonctionnement ol li a .fas{
+  margin-right: 1.25rem;
+}
 
 #fonctionnement ol li :hover {
   background: #f5edff;
@@ -284,7 +288,7 @@ a.resto_card {
   background: white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 180px;
+  height: 180px!important;
   margin: 4rem 0;
 }
 
@@ -338,6 +342,7 @@ a.resto_card {
   height: 100%;
 }
 
+
 .resto_img img {
   width: 100%;
   height: 100%;
@@ -345,7 +350,18 @@ a.resto_card {
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
 }
-
+.resto_card:nth-child(2) > article figure img:nth-child(1) {
+  object-position: 0 bottom;
+  }
+.resto_card:nth-child(3) > article figure img:nth-child(1) {
+  object-position: 0 60%;
+  }
+.resto_card:nth-child(4) > article figure img:nth-child(1) {
+    object-position: 0% bottom;
+  }
+.resto_card:nth-child(5) > article figure img:nth-child(1) {
+    object-position: 0% bottom;
+  }
 .place {
   display: flex;
   background: white;
@@ -709,7 +725,10 @@ article:hover .menu_validation {
     transform: translateX(-50px);
   }
 }
-
+.menu_validation{
+  transform: rotate(-360deg);
+transition: transform 500ms ease-in-out;
+}
 .menu_validation :first-child {
   color: #99e2d0;
   background: white;
@@ -717,12 +736,12 @@ article:hover .menu_validation {
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
-  animation: circleRotation 1s infinite linear;
+  /* animation: circleRotation 1s infinite linear;
   -webkit-animation: circleRotation 1s infinite linear;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transition-duration: 0.7s;
-  transition-timing-function: linear;
+  transition-timing-function: linear; */
 }
 
 @keyframes circleRotation {
@@ -845,12 +864,12 @@ article:hover .menu_validation {
 }
 
 /* ---------------------------------------------------------------------------------------
--------------------------------------Tablette-------------------------------------------- */
+-------------------------------------landscape-------------------------------------------- */
 @media only screen and (min-device-width: 589px) and (max-device-width: 1024px) {
   /* Styles pour cette Media Queries */
   #presentation {
     width: 100%;
-    height: 30vh;
+    height: 40vh;
   }
 
   #fonctionnement {
@@ -871,13 +890,39 @@ article:hover .menu_validation {
   justify-content: space-evenly;
   justify-content: center;
 }
-
+a.resto_card{
+  height: 300px;
+}
+.resto_card:nth-child(2) > article figure img:nth-child(1) {
+  object-position: 0;
+  }
+.resto_card:nth-child(3) > article figure img:nth-child(1) {
+  object-position: 0px 58%;
+  }
+.resto_card:nth-child(4) > article figure img:nth-child(1) {
+  object-position: 0% 84%;
+  }
+.resto_card:nth-child(5) > article figure img:nth-child(1) {
+    object-position: 0% 89%;
+  }
+/* ---------------------------------------------------------------------------------------
+-------------------------------------Desktop-------------------------------------------- */
 @media only screen and (min-width: 1024px) {
   /* Styles pour cette Media Queries */
+  #presentation {
+    width: 100%;
+    height: 70vh;
+  }
+  #presentation .btn {
+    width: 40%;
+  }
+  
   #grid_container {
     margin: 0 auto;
   }
-
+  #fonctionnement li::before {
+    margin-top: 2.6rem;
+    }
   #fonctionnement {
     justify-content: center;
     align-content: space-between;
@@ -894,8 +939,6 @@ article:hover .menu_validation {
   }
 
   #fonctionnement ol li a {
-    justify-content: space-around;
-    padding: 11px;
     height: 8rem;
   }
 
@@ -905,7 +948,7 @@ article:hover .menu_validation {
 
   #fonctionnement {
     width: 100%;
-    margin: 0 auto;
+    margin:  auto;
   }
   #fonctionnement ol {
     width: 100%;
@@ -916,18 +959,6 @@ article:hover .menu_validation {
   #fonctionnement ol li a {
     margin: 0 auto;
   }
-  /* #resto_grid {
-    display: grid;
-    grid-template-rows: repeat(2,minmax(250px, min-contant));
-    grid-template-columns: repeat(2,600px);
-    grid-gap: 9rem;
-  
-    margin: 0 auto;
-    }
-    #resto_grid h2{
-      display: grid;
-      grid-column: 1/-1;
-    } */
   .resto_card article {
     width: auto;
   }
