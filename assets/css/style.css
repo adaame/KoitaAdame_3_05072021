@@ -288,7 +288,7 @@ a.resto_card {
   background: white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 180px!important;
+  height: 200px!important;
   margin: 4rem 0;
 }
 
@@ -581,8 +581,11 @@ footer .fas {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 90%;
 }
-
+:hover.descriptions:nth-child(1)>:nth-child(2){
+  width:70%;
+}
 .menu_name {
   margin-bottom: 0.5em;
   font-weight: bold;
@@ -682,6 +685,7 @@ footer .fas {
 
 .menus_parts article {
   position: relative;
+  
 }
 
 .menu_validation {
@@ -725,17 +729,18 @@ article:hover .menu_validation {
     transform: translateX(-50px);
   }
 }
-.menu_validation{
-  transform: rotate(-360deg);
-transition: transform 500ms ease-in-out;
-}
 .menu_validation :first-child {
   color: #99e2d0;
   background: white;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
-  line-height: 2.5rem;
+  line-height: 2.4rem;
+  justify-content: center;
+  text-align: center;
+  animation: circleRotation 2s infinite;
+  -webkit-animation: circleRotation 2s infinite;
+  transition: animation 2s;
   /* animation: circleRotation 1s infinite linear;
   -webkit-animation: circleRotation 1s infinite linear;
   transform: rotate(180deg);
@@ -744,6 +749,11 @@ transition: transform 500ms ease-in-out;
   transition-timing-function: linear; */
 }
 
+.fa-check-circle::before{
+  animation: circleRotation 2s ease-in;
+  -webkit-animation: circleRotation 2s ease-in;
+  transition: animation 2s;
+}
 @keyframes circleRotation {
   from {
     transform: rotate(-180deg);
@@ -766,7 +776,7 @@ transition: transform 500ms ease-in-out;
   width: 100%;
 }
 
-.menus_container article {
+/* .menus_container article {
   animation: fadein 2s;
   transition: ease;
   animation-delay: 0s;
@@ -776,7 +786,7 @@ transition: transform 500ms ease-in-out;
   -moz-transition: disipare 2s;
   -ms-transition: disipare 2s;
   -o-transition: disipare 2s;
-}
+} */
 
 @keyframes fadein {
   from {
@@ -797,7 +807,7 @@ transition: transform 500ms ease-in-out;
 .loader {
   width: 100%;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -847,6 +857,7 @@ transition: transform 500ms ease-in-out;
     z-index: 2000;
   }
   100%{
+    opacity: 0;
     z-index: -1;
     visibility: hidden;
   }
