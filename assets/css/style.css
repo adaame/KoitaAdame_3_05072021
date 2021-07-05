@@ -707,7 +707,6 @@ article:hover .price {
   right: 0rem;
   transform: translate(-25px, 0);
   animation: slide 0.2s forwards;
-  -webkit-animation: slide 0.2s forwards;
   -webkit-transform: translate(-25px, 0);
   -moz-transform: translate(-25px, 0);
 }
@@ -740,20 +739,9 @@ article:hover .menu_validation {
   text-align: center;
   animation: circleRotation 2s infinite;
   -webkit-animation: circleRotation 2s infinite;
-  transition: animation 2s;
-  /* animation: circleRotation 1s infinite linear;
-  -webkit-animation: circleRotation 1s infinite linear;
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transition-duration: 0.7s;
-  transition-timing-function: linear; */
+  animation-iteration-count: 1;
 }
 
-.fa-check-circle::before{
-  animation: circleRotation 2s ease-in;
-  -webkit-animation: circleRotation 2s ease-in;
-  transition: animation 2s;
-}
 @keyframes circleRotation {
   from {
     transform: rotate(-180deg);
@@ -761,7 +749,7 @@ article:hover .menu_validation {
     -moz-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
-  }
+}
 
   to {
     transform: rotate(0deg);
