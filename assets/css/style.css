@@ -71,63 +71,6 @@ header a {
   justify-content: center;
   display: flex;
 }
-
-/*----------------------------LOADER------------------------------------------------------------------------*/
-/* .loader{
-    border-radius: 50px;
-    border: 3px solid transparent;
-    border-top-color: tomato;
-    height: 100vh;
-    line-height: 100vh;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    animation:spin 1s linear 0s infinite;
-    height: 50px;
-    width: 50px;
-    
-}
-.demis_cercle {
-    border-radius: 50px;
-    border:3px solid transparent;
-    border-top-color: #FF79DA;
-    animation:spin 1s linear 0s infinite;
-    height: 50px;
-    width: 50px;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-    color: #9356DC;
-    display: inline-flex;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-}
-
-.demis_cercle::after{
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    bottom: 5px;
-    right: 5px;
-    width: 50px;
-    height: 50px;
-    border: 3px solid transparent ;
-    border-radius: 50px;
-    opacity: 0.8;
-    border-top-color: #FF79DA;
-} */
-/* animation:spin 1s linear 0s infinite; */
-
-/* @keyframes spin {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{ transform: rotate(360deg);
-} 
-} */
 /*----------------------------MAIN------------------------------------------------------------------------*/
 main {
   display: flex;
@@ -162,6 +105,7 @@ main {
   text-align: center;
   background: #f6f6f6;
   height: 40vh;
+  margin: 0 auto;
 }
 
 .presentation_title {
@@ -191,7 +135,7 @@ main {
 
 #presentation .btn:hover {
   opacity: 0.7;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgb(168, 164, 164);
+  box-shadow:  0.2rem 0.2rem 0.5rem rgb(0, 0, 1);
   border: none;
 }
 
@@ -263,7 +207,7 @@ main {
 #fonctionnement ol li :hover {
   background: #f5edff;
   border: none;
-  box-shadow: 0.2rem 0.2rem 0.5rem rgb(0, 0, 1);
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.42);
 }
 
 #fonctionnement .fas {
@@ -289,7 +233,7 @@ a.resto_card {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 200px!important;
-  margin: 4rem 0;
+  margin: 5rem 0;
 }
 .resto_card figure {
   width: 100%;
@@ -304,7 +248,7 @@ a.resto_card {
   position: absolute;
   color: #259c7f;
   right: 21px;
-  top: 1rem;
+  bottom: 14rem;
   background: #99e2d0;
   border-radius: 2px;
   padding: 0.35em;
@@ -327,7 +271,7 @@ a.resto_card {
   margin-bottom: 10px;
 }
 
-.resto_card article {
+.resto_card div {
   position: relative;
   margin-bottom: 10px;
 }
@@ -349,22 +293,23 @@ a.resto_card {
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
 }
-.resto_card:nth-child(2) > article figure img:nth-child(1) {
+.resto_card:nth-child(2) > div figure img:nth-child(1) {
   object-position: 0 bottom!important;
   }
-.resto_card:nth-child(3) > article figure img:nth-child(1) {
+.resto_card:nth-child(3) > div figure img:nth-child(1) {
   object-position: 0 60%!important;
   }
-.resto_card:nth-child(4) > article figure img:nth-child(1) {
+.resto_card:nth-child(4) > div figure img:nth-child(1) {
     object-position: 0% bottom!important;
   }
-.resto_card:nth-child(5) > article figure img:nth-child(1) {
+.resto_card:nth-child(5) > div figure img:nth-child(1) {
     object-position: 0% bottom!important;
   }
 .place {
   display: flex;
   background: white;
-  border-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
   align-items: center;
 }
 
@@ -754,16 +699,12 @@ animation-iteration-count: 1000;
     transform: rotate(-180deg);
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    -o-transform: rotate(-180deg);
 }
 
   to {
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
   }
 }
 
@@ -774,7 +715,7 @@ animation-iteration-count: 1000;
 .menus_container article {
   animation: fadein 2s;
   transition: ease;
-  animation-delay: 1;
+  animation-delay: 1s;
   -webkit-animation: fadein 2s;
 }
 
@@ -801,7 +742,7 @@ animation-iteration-count: 1000;
   justify-content: center;
   align-items: center;
   display: flex;
-  animation-delay: 1;
+  animation-delay: 1s;
   z-index: 1000;
   top: 0;
   position: fixed;
@@ -809,7 +750,7 @@ animation-iteration-count: 1000;
   -webkit-animation: disipare 3s linear both;
 }
  
-.lettre{
+.letters{
   color: #484848;
   font-size: 4rem;
   letter-spacing: 15px ;
@@ -832,28 +773,28 @@ animation-iteration-count: 1000;
   }
   
 }
-.lettre:nth-child(1){
+.letters:nth-child(1){
   animation-delay: 0.1s;
 }
-.lettre:nth-child(2){
+.letters:nth-child(2){
   animation-delay: 0.2s;
 }
-.lettre:nth-child(3){
+.letters:nth-child(3){
   animation-delay: 0.3s;
 }
-.lettre:nth-child(4){
+.letters:nth-child(4){
   animation-delay: 0.4s;
 }
-.lettre:nth-child(5){
+.letters:nth-child(5){
   animation-delay: 0.5s;
 }
-.lettre:nth-child(6){
+.letters:nth-child(6){
   animation-delay: 0.6s;
 }
-.lettre:nth-child(7){
+.letters:nth-child(7){
   animation-delay: 0.7s;
 }
-.lettre:nth-child(8){
+.letters:nth-child(8){
   animation-delay: 0.8s;
 }
 @keyframes disipare {
@@ -874,7 +815,7 @@ animation-iteration-count: 1000;
 
 /* ---------------------------------------------------------------------------------------
 -------------------------------------landscape-------------------------------------------- */
-@media only screen and (min-device-width: 589px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 589px) and (max-width: 1024px) {
   /* Styles pour cette Media Queries */
   #presentation {
     width: 100%;
@@ -901,6 +842,7 @@ animation-iteration-count: 1000;
 }
 a.resto_card{
   height: 300px;
+
 }
 .resto_card:nth-child(2) > article figure img:nth-child(1) {
   object-position: 0;
@@ -920,7 +862,7 @@ a.resto_card{
   /* Styles pour cette Media Queries */
   #presentation {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
   }
   #presentation .btn {
     width: 40%;
@@ -963,7 +905,7 @@ a.resto_card{
     width: 100%;
   }
   #fonctionnement ol li {
-    margin: 0 12px;
+    margin: 1rem 12px;
   }
   #fonctionnement ol li a {
     margin: 0 auto;
