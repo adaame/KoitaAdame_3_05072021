@@ -321,6 +321,7 @@ a.resto_card {
   transition: all 400ms;
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
+  color: black;
 }
 
 .heart_1 {
@@ -674,7 +675,8 @@ article:hover .menu_validation {
     transform: translateX(-50px);
   }
 }
-.menu_validation :first-child {
+
+article:hover .menu_validation i {
   color: #99e2d0;
   background: white;
   border-radius: 50%;
@@ -683,22 +685,18 @@ article:hover .menu_validation {
   line-height: 2.4rem;
   justify-content: center;
   text-align: center;
-  animation: circleRotation 2s infinite ;
-  -webkit-animation: circleRotation 2s infinite ;
+  animation: circleRotation 0.5s  ;
+  -webkit-animation: circleRotation 0.5s  ;
   animation-iteration-count: 1;
+
 }
-/* .menu_validation:hover :first-child {
-  -webkit-animation: circleRotation 2s infinite;
-    animation-iteration-count: 19;
-animation-iteration-count: 1000;
-} */
-
-
 @keyframes circleRotation {
   from {
-    transform: rotate(-180deg);
-    -webkit-transform: rotate(-180deg);
-    -moz-transform: rotate(-180deg);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
 }
 
   to {
@@ -717,6 +715,7 @@ animation-iteration-count: 1000;
   transition: ease;
   animation-delay: 1s;
   -webkit-animation: fadein 2s;
+  overflow: hidden;
 }
 
 @keyframes fadein {
@@ -816,7 +815,7 @@ animation-iteration-count: 1000;
 /* ---------------------------------------------------------------------------------------
 -------------------------------------landscape-------------------------------------------- */
 @media only screen and (min-width: 589px) and (max-width: 1024px) {
-  /* Styles pour cette Media Queries */
+  /* Styles for this Media Queries */
   #presentation {
     width: 100%;
     height: 40vh;
@@ -859,7 +858,7 @@ a.resto_card{
 /* ---------------------------------------------------------------------------------------
 -------------------------------------Desktop-------------------------------------------- */
 @media only screen and (min-width: 1024px) {
-  /* Styles pour cette Media Queries */
+  /* Styles for this Media Queries */
   #presentation {
     width: 100%;
     height: 50vh;
