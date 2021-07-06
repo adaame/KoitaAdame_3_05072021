@@ -420,15 +420,12 @@ footer .fas {
   line-height: 1rem;
 }
 
-/*--------------------------------------------------------------
-----------------------------FIN PAGE index----------------
+/*--------------------------------------------------------
+---------------------FIN PAGE accueil----------------
 ----------------------------------------------------------*/
 
-/*---------------------
-----------------------header-----------------*/
-/* .menus_container{
-  position: relative;
-} */
+/*---------------------Menu header-----------------*/
+
 .header_menu {
   display: flex;
   box-shadow: none;
@@ -449,7 +446,7 @@ footer .fas {
 }
 
 /*---------------------
-----------------------MAIN-----------------*/
+----------------------Menu MAIN-----------------*/
 .menu_main {
   display: flex;
   flex-wrap: wrap;
@@ -459,10 +456,8 @@ footer .fas {
   top: 26rem;
   background-color: #f6f6f6;
   flex-direction: column;
-  height: auto;
   width: 100%;
   overflow: hidden;
-  /* text-overflow       : ellipsis; */
   /*permet de remonter la partie titre sur la photo sans tout bloquée */
 }
 
@@ -568,7 +563,7 @@ footer .fas {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7rem;
+  height: 12rem;
   animation: slidein 3s ease-in 1s infinite;
   -webkit-animation: slidein 3s ease-in 1s infinite;
 }
@@ -724,6 +719,7 @@ article:hover .menu_validation i {
   animation-delay: 1s;
   -webkit-animation: fadein 2s;
   overflow: hidden;
+  /*overflow hidden cache ce qui deborde des articles donc meilleur apparition visuel de menu_validation*/
 }
 
 @keyframes fadein {
@@ -940,8 +936,7 @@ a.resto_card {
   }
 
   #fonctionnement {
-    justify-content: center;
-    align-content: space-between;
+    height: 37rem;
   }
 
   #fonctionnement ol {
