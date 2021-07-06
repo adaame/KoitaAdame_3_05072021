@@ -459,7 +459,7 @@ footer .fas {
   top: 26rem;
   background-color: #f6f6f6;
   flex-direction: column;
-  height: 200vh;
+  height: auto;
   width: 100%;
   overflow: hidden;
   /* text-overflow       : ellipsis; */
