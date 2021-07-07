@@ -681,7 +681,7 @@ article:hover .menu_validation {
 
 article:hover .menu_validation i {
   color: white;
-  background: #99e2d0;;
+  background: #99e2d0;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
@@ -698,8 +698,6 @@ article:hover .menu_validation i {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
   }
 
   to {
@@ -715,11 +713,11 @@ article:hover .menu_validation i {
 
 .menus_container article {
   animation: fadein 2s;
-  transition: ease;
-  animation-delay: 1s;
   -webkit-animation: fadein 2s;
+  transition: ease;
   overflow: hidden;
   /*overflow hidden cache ce qui deborde des articles donc meilleur apparition visuel de menu_validation*/
+  /* fadein effet apparation des elements de mon menu */
 }
 
 @keyframes fadein {
@@ -745,12 +743,11 @@ article:hover .menu_validation i {
   justify-content: center;
   align-items: center;
   display: flex;
-  animation-delay: 1s;
   z-index: 1000;
   top: 0;
   position: fixed;
-  animation: disipare 3s linear both;
-  -webkit-animation: disipare 3s linear both;
+  animation: disparition 3s linear both;
+  -webkit-animation: disparition 3s linear both;
 }
 
 .letters {
@@ -762,6 +759,7 @@ article:hover .menu_validation i {
   font-family: "Shrikhand", sans-serif;
 }
 
+/* dégradée de couleur sur lettre + effet ombre sur le texte  */
 @keyframes neon {
   0% {
     color: #ff79da;
@@ -779,6 +777,8 @@ article:hover .menu_validation i {
   }
 }
 
+
+/* donne un effet lettre part lettre decalage */
 .letters:nth-child(1) {
   animation-delay: 0.1s;
 }
@@ -811,7 +811,7 @@ article:hover .menu_validation i {
   animation-delay: 0.8s;
 }
 
-@keyframes disipare {
+@keyframes disparition {
   0% {
     opacity: 1;
   }
