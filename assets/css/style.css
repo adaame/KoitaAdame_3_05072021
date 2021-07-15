@@ -339,6 +339,7 @@ a.resto_card {
   opacity: 1;
 }
 
+
 .heart_2 {
   color: transparent;
   opacity: 0;
@@ -348,7 +349,10 @@ a.resto_card {
   background: linear-gradient(#ff79da, #9356dc);
   background-clip: border-box;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color:transparent;
+
 }
 
 .heart:hover .heart_2 {
@@ -364,19 +368,7 @@ a.resto_card {
   -o-transform: scale(1);
 }
 
-.heart:hover .heart_1 {
-  display: none;
-}
 
-.heart_1:hover {
-  opacity: 0;
-  transform: scale(0.1);
-  -webkit-transform: scale(0.1);
-  -moz-transform: scale(0.1);
-  transition: 0.2s;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-}
 
 /**************Footer*******************/
 .footer {
@@ -650,17 +642,6 @@ footer .fas {
   cursor: pointer;
   position: absolute;
 }
-
-article:hover .price {
-  right: 0rem;
-  transform: translate(-25px, 0);
-  animation: slide 0.2s forwards;
-  -webkit-transform: translate(-25px, 0);
-  -moz-transform: translate(-25px, 0);
-  /* j'anime mon article au hover avec slide effet sur .price
-  forward retiendra les valeurs calculées définies lors de la dernière étape (keyframe).*/
-}
-
 article:hover .menu_validation {
   right: 0rem;
   transition: right 0.2s;
@@ -669,6 +650,13 @@ article:hover .menu_validation {
   animation-iteration-count: 1;
   /*apparition du check au passage de la souris */
 }
+article:hover .price {
+  right: 0rem;
+  animation: slide 0.2s forwards;
+  /* j'anime mon article au hover avec slide effet sur .price
+  forward retiendra les valeurs calculées définies lors de la dernière étape (keyframe).*/
+}
+
 
 @keyframes slide {
   0% {
