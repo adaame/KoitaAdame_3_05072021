@@ -338,6 +338,9 @@ a.resto_card {
   position: absolute;
   opacity: 1;
 }
+.heart:hover .heart_1 {
+  display: none;
+}
 
 
 .heart_2 {
@@ -350,22 +353,16 @@ a.resto_card {
   background-clip: border-box;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color:transparent;
-
 }
 
 .heart:hover .heart_2 {
-  color: rgba(147, 86, 220, 1);
   transition: 0.8s;
-  transform: scale(1);
+  transform: scale(1) ;
   opacity: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
+  -webkit-transform: scale(1) ;
+  -moz-transform: scale(1) ;
   -webkit-transition: 0.8s;
   -moz-transition: 0.8s;
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
 }
 
 
