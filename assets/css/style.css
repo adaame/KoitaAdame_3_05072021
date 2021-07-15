@@ -155,6 +155,7 @@ main {
   margin-bottom: 30px;
   list-style: none;
   padding-left: 0%;
+  counter-reset: li;
   /*reset le comptage */
 }
 
