@@ -154,7 +154,7 @@ main {
   flex-direction: row;
   margin-bottom: 30px;
   list-style: none;
-  counter-reset: li;
+  padding-left: 0%;
   /*reset le comptage */
 }
 
@@ -171,7 +171,12 @@ main {
   margin-left: -7px;
   margin-top: 1.6rem;
   position: absolute;
+  
 }
+/* #fonctionnement ol >li::before{
+  background: red;
+  color: red;
+} */
 
 #fonctionnement li {
   counter-increment: li;
@@ -296,19 +301,19 @@ a.resto_card {
 }
 
 .resto_card:nth-child(2) > div figure img:nth-child(1) {
-  object-position: 0 bottom !important;
+  object-position: 0 bottom ;
 }
 
 .resto_card:nth-child(3) > div figure img:nth-child(1) {
-  object-position: 0 60% !important;
+  object-position: 0 60% ;
 }
 
 .resto_card:nth-child(4) > div figure img:nth-child(1) {
-  object-position: 0% bottom !important;
+  object-position: 0% bottom ;
 }
 
 .resto_card:nth-child(5) > div figure img:nth-child(1) {
-  object-position: 0% bottom !important;
+  object-position: 0% bottom ;
 }
 
 .place {
@@ -563,8 +568,6 @@ footer .fas {
   justify-content: center;
   align-items: center;
   height: 12rem;
-  animation: slidein 3s ease-in 1s infinite;
-  -webkit-animation: slidein 3s ease-in 1s infinite;
 }
 
 .menu_btn {
@@ -575,8 +578,6 @@ footer .fas {
   font-size: medium;
   background: linear-gradient(#ff79da, #9356dc);
   color: white;
-  animation:slidein 3s ease-in 1s infinite ;
-  -webkit-animation:slidein 3s ease-in 1s infinite ;
 }
 
 .menu_btn:hover {
@@ -715,6 +716,7 @@ article:hover .menu_validation i {
 .menus_container article {
   animation: fadein 2s;
   -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
   transition: ease;
   overflow: hidden;
   /*overflow hidden cache ce qui deborde des articles donc meilleur apparition visuel de menu_validation*/
@@ -749,6 +751,7 @@ article:hover .menu_validation i {
   position: fixed;
   animation: disparition 3s linear both;
   -webkit-animation: disparition 3s linear both;
+  -moz-animation: disparition 3s linear both;
   /* A-fill-mode both permet retour à l'etat initial   */
 }
 
@@ -758,6 +761,7 @@ article:hover .menu_validation i {
   letter-spacing: 15px;
   animation: neon 1.2s linear infinite;
   -webkit-animation: neon 1.2s linear infinite;
+  -moz-animation: neon 1.2s linear infinite;
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -778,7 +782,6 @@ article:hover .menu_validation i {
     text-shadow: 0 0 7px #fff;
   }
 }
-
 
 /* donne un effet lettre part lettre decalage */
 .letters:nth-child(1) {
@@ -854,6 +857,9 @@ article:hover .menu_validation i {
     padding: 15px 35px;
     font-size: 1.4rem;
   }
+  #fonctionnement li::before {
+    margin-top: 1.1rem;
+  }
 
   h2 {
     font-size: 1.5rem;
@@ -889,33 +895,32 @@ article:hover .menu_validation i {
   #fonctionnement ol li {
     width: 100%;
   }
-}
 
-#fonctionnement ol li a {
-  justify-content: space-evenly;
-  justify-content: center;
-}
+  #fonctionnement ol li a {
+    justify-content: space-evenly;
+    justify-content: center;
+  }
 
-a.resto_card {
-  height: 300px;
-}
+  a.resto_card {
+    height: 300px;
+  }
 
-.resto_card:nth-child(2) > article figure img:nth-child(1) {
-  object-position: 0;
-}
+  .resto_card:nth-child(2) > article figure img:nth-child(1) {
+    object-position: 0!important;
+  }
 
-.resto_card:nth-child(3) > article figure img:nth-child(1) {
-  object-position: 0px 58%;
-}
+  .resto_card:nth-child(3) > article figure img:nth-child(1) {
+    object-position: 0px 68%!important;
+  }
 
-.resto_card:nth-child(4) > article figure img:nth-child(1) {
-  object-position: 0% 84%;
-}
+  .resto_card:nth-child(4) > article figure img:nth-child(1) {
+    object-position: 0% 84%;
+  }
 
-.resto_card:nth-child(5) > article figure img:nth-child(1) {
-  object-position: 0% 89%;
+  .resto_card:nth-child(5) > article figure img:nth-child(1) {
+    object-position: 0% 89%;
+  }
 }
-
 /* ---------------------------------------------------------------------------------------
 -------------------------------------Desktop-------------------------------------------- */
 @media only screen and (min-width: 1024px) {
